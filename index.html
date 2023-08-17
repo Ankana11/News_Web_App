@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Requires meta tag -------------------->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Web App</title>
+    <!-- Adding CSS file -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Making Navbar -->
+
+    <nav>
+        <div class="main-nav container flex h-nav-resp">
+            <a href="#" onclick="reload()" class="logo">
+                <img src="https://w7.pngwing.com/pngs/982/544/png-transparent-news-graphy-logo-icon-news-logo-text-photography-computer-wallpaper.png"
+                    alt="logo">
+            </a>
+            <div class="navlist">
+                <ul class="flex  v-class-resp navlist-resp">
+                    <li class="hover-links nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-links nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-links nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-links nav-item" id="weather" onclick="onNavItemClick('weather')">Weather</li>
+
+                </ul>
+            </div>
+
+            <!-- Creating Search bar -->
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="eg. Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+       <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Beginning Main Section -->
+    <main>
+        <div class="card-container container flex" id="cards-container">
+
+        </div>
+        </div>
+    </main>
+
+    <!-- Adding templates to follow DRY method -->
+
+    <template id="templates">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">title</h3>
+                <h6 class="news-source" id="news-source">gadegt 23245</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                    expedita quisquam quis ducimus culpa saepe recusandae tempore incidunt hic. Aut corrupti nobis
+                    doloribus cum quod unde vero ratione id sapiente!</p>
+            </div>
+    </template>
+</body>
+<!-- Adding JavaScript file -->
+<script src="index.js"></script>
+
+</html>
